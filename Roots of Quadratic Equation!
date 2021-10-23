@@ -1,0 +1,31 @@
+// This program calculates the roots of a QE, both real and imaginary roots!
+// Just enter your coefficients of x^2, x and the constant term and let your system compute the hectic equations!
+// You can enter the terms as floats, int, or even signed. We got you covered!
+// Go on and try one!
+
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+int main(){
+
+long double a, b, c, d, rp, ip;
+  
+  cout << "Enter the coeffiecients of x^2, x and the constant term: ";
+  cin >> a >> b >> c;
+  
+  d = (b*b) - (4*a*c);
+  
+  if(d>=0){
+        cout << "Roots of this QE are " << ((-1)*b + pow(d, 0.5))/(2*a) << " and " << ((-1)*b - pow(d, 0.5))/(2*a);
+    }
+  
+  else{
+    rp = ((-1)*b)/(2*a);
+    ip = (pow(abs(d), 0.5))/(2*a);
+  
+  cout << "Roots of this QE are " << "(" << rp << " + " << ip << "i) and (" << rp << " - " << ip << "i)";
+    }
+    return 0;
+}
